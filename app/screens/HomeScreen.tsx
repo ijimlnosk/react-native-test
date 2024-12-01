@@ -9,7 +9,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({navigation}) => {
 
   return (
     <View>
-      <Text>Total: {total}</Text>
+      <Text>총 사용 금액: {total}</Text>
       <FlatList
         data={expenses}
         renderItem={({item}) => (
@@ -22,7 +22,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({navigation}) => {
         keyExtractor={(item, index) => index.toString()}
       />
       <Button
-        title="Add Expense"
+        title="입력하기"
         onPress={() => navigation.navigate('AddExpense')}
       />
     </View>
